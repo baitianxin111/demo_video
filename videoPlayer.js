@@ -10,7 +10,7 @@
 		var self = this;
 		this.buffers = [];
 		function success (stream){
-			self.mediaRecorder = new  MediaRecorder(stream,{mimeType:"video/webm"});
+			self.mediaRecorder = new  MediaRecorder(stream);
 			self.mediaRecorder.ondataavailable = function(event){
 				self.buffers.push(event.data);
 				console.log(event.data);
